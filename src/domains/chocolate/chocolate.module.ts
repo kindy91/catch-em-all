@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ChocolateListComponent } from './chocolate-list/chocolate-list.component';
 import { ChocolateDetailComponent } from './chocolate-detail/chocolate-detail.component';
 import { ChocolateRoutingModule } from './chocolate-routing.module';
+import { ChocolateStateModule } from './_state/state.module';
 
 
 
@@ -13,7 +14,8 @@ import { ChocolateRoutingModule } from './chocolate-routing.module';
   ],
   imports: [
     CommonModule,
-    ChocolateRoutingModule
+    ChocolateRoutingModule,
+    ChocolateStateModule
   ]
 })
 export class ChocolateModule { }
