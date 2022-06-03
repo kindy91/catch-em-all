@@ -7,7 +7,6 @@ import { ChocolateViewData } from '../_entities/_interfaces/chocolate-view-data.
 @Component({
   selector: 'app-chocolate-list',
   templateUrl: './chocolate-list.component.html',
-  styleUrls: ['./chocolate-list.component.scss']
 })
 export class ChocolateListComponent {
   displayedColumns: string[] = ['name', 'brand', 'currency', 'averagePrice', 'minimumPrice', 'cheapestShop', 'details'];
