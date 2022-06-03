@@ -7,6 +7,9 @@ import {
 } from './chocolate.actions';
 import { Action } from '@ngrx/store';
 import { ChocolateDataService } from '../../_data-service/chocolate-data.service';
+import { Chocolate } from '../../_entities/_models/chocolate.class';
+import { enrichViewData } from '../chocolate-view/chocolate-view.actions';
+import { map as _map } from 'lodash/fp';
 
 @Injectable()
 export class ChocolateEffects implements OnInitEffects {
