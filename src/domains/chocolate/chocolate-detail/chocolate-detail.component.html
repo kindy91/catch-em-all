@@ -1,1 +1,34 @@
-<p>chocolate-detail works!</p>
+<h3 class="flex items-center cursor-pointer" routerLink="/chocolate">
+    <mat-icon>arrow_back</mat-icon> Chocolates List
+</h3>
+
+<ng-container *ngIf="{
+    chocolate: appService.selectedChocolate$ | async
+} as sources">
+    <ng-container *ngIf="sources.chocolate; else notAvailable">
+        <div class="grid grid-cols-4 gap-5">
+            <h4 class="col-span-full">
+                The chocolate <b>{{sources.chocolate.name }}</b>, manifactured by <b>{{sources.chocolate.brand}}</b>, the following prices:
+             </h4>
+         
+             <div class="col-start-2 col-span-2 flex flex-col">
+                <a *ngFor="let price of sources?.chocolate?.prices" [href]="price.link" target="_blank"> 
+                    <div class="flex justify-between items-center p-3"> 
+                        <span class="text-lg">{{price.price}} {{sources?.chocolate?.currency}} / {{price.amount}} {{price.unit}}</span>
+                        <span class="text-xs text-right">by: <b>{{price.shop}}</b> </span>
+                    </div>
+                    <mat-divider></mat-divider>
+                </a>
+             </div>
+        </div>
+    </ng-container>
+
+    <ng-template #notAvailable>
+        <div class="flex justify-center align-center">
+         <div class="flex flex-col items-center">
+            <p>No selected chocolate available!</p>
+            <p>Please go back to the chocolates list view and select one.</p>
+         </div>
+        </div>
+    </ng-template>
+</ng-container>

@@ -25,12 +25,18 @@
 
             <ng-container matColumnDef="averagePrice">
               <th mat-header-cell *matHeaderCellDef> Avg. Price </th>
-              <td mat-cell *matCellDef="let element"> {{getViewDataProperty(element?.id, sources.viewDataEntities!, 'averagePrice') || '-'}}</td>
+              <td mat-cell *matCellDef="let element"> 
+                {{getViewDataProperty(element?.id, sources.viewDataEntities!, 'averagePrice') || '-'}}
+                {{getViewDataProperty(element?.id, sources.viewDataEntities!, 'averagePrice')? element?.currency: ''}} 
+              </td>
             </ng-container>
 
             <ng-container matColumnDef="minimumPrice">
               <th mat-header-cell *matHeaderCellDef> Min. Price </th>
-              <td mat-cell *matCellDef="let element"> {{getViewDataProperty(element?.id, sources.viewDataEntities!, 'minimumPrice') || '-'}}</td>
+              <td mat-cell *matCellDef="let element"> 
+                {{getViewDataProperty(element?.id, sources.viewDataEntities!, 'minimumPrice') || '-'}} 
+                {{getViewDataProperty(element?.id, sources.viewDataEntities!, 'minimumPrice')? element?.currency: ''}} 
+              </td>
             </ng-container>
 
             <ng-container matColumnDef="cheapestShop">

@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ChocolateAppService } from '../_app-service/chocolate-app.service';
 
 @Component({
   selector: 'app-chocolate-detail',
   templateUrl: './chocolate-detail.component.html',
   styleUrls: ['./chocolate-detail.component.scss']
 })
-export class ChocolateDetailComponent implements OnInit {
+export class ChocolateDetailComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor(readonly appService: ChocolateAppService) { }
 }
