@@ -3,7 +3,7 @@
 </h3>
 
 <ng-container *ngIf="{
-    chocolates: appSerivce.chocolates$ | async, viewDataEntities: appSerivce.viewDataEntities$ | async
+    chocolates: appService.chocolates$ | async, viewDataEntities: appService.viewDataEntities$ | async
 } as sources">
     <ng-container *ngIf="sources.chocolates && sources.chocolates.length > 0; else emptyList">
         <table mat-table [dataSource]="sources.chocolates" class="mat-elevation-z8 w-full">
@@ -45,7 +45,7 @@
             <ng-container matColumnDef="details">
               <th mat-header-cell *matHeaderCellDef></th>
               <td mat-cell *matCellDef="let element">
-                <button mat-flat-button color="accent" routerLink="/chocolate/detail">
+                <button mat-flat-button color="accent" routerLink="/chocolate/detail" (click)="appService.setSelectedId(element?.id)">
                   <span class="flex items-center">
                     Details
                     <mat-icon>keyboard_arrow_right</mat-icon>

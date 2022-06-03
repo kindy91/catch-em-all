@@ -12,7 +12,7 @@ import { ChocolateViewData } from '../_entities/_interfaces/chocolate-view-data.
 export class ChocolateListComponent {
   displayedColumns: string[] = ['name', 'brand', 'currency', 'averagePrice', 'minimumPrice', 'cheapestShop', 'details'];
 
-  constructor(readonly appSerivce: ChocolateAppService) { }
+  constructor(readonly appService: ChocolateAppService) { }
 
   getViewDataProperty(id: number, viewDataEntities: Dictionary<ChocolateViewData>, property: keyof ChocolateViewData) {
     return viewDataEntities[id]![property]
