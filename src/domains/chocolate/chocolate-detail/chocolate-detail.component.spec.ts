@@ -1,25 +1,29 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ChocolateAppService } from '../_app-service/chocolate-app.service';
+import { MatIconModule } from '@angular/material/icon';
 
 import { ChocolateDetailComponent } from './chocolate-detail.component';
 
 describe('ChocolateDetailComponent', () => {
-  let component: ChocolateDetailComponent;
+  let testUnit: ChocolateDetailComponent;
   let fixture: ComponentFixture<ChocolateDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChocolateDetailComponent ]
+      imports: [MatIconModule],
+      declarations: [ ChocolateDetailComponent ],
+      providers: [{provide: ChocolateAppService, useValue: {}}]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ChocolateDetailComponent);
-    component = fixture.componentInstance;
+    testUnit = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(testUnit).toBeTruthy();
   });
 });
