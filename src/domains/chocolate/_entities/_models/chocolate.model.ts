@@ -1,4 +1,4 @@
-import { Price } from "./price.class";
+import { Price } from "./price.model";
 import { map as _map } from 'lodash/fp';
 
 export class Chocolate {

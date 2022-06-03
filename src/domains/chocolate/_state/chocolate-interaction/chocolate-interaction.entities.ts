@@ -1,5 +1,5 @@
 import { EntityState } from '@ngrx/entity';
-import { Chocolate } from '../../_entities/_models/chocolate.class';
+import { Chocolate } from '../../_entities/_models/chocolate.model';
 
 export interface ChocolateInteractionFeatureState {
   selectedChocolateId: string;

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Chocolate } from '../_entities/_models/chocolate.class';
+import { Chocolate } from '../_entities/_models/chocolate.model';
 import { chocolatesSelector, selectedChocolateSelector } from '../_state/chocolate/chocolate.selectors';
 import { map as _map } from 'lodash/fp';
 import { Dictionary } from '@ngrx/entity';

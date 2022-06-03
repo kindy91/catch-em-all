@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Chocolate } from '../../_entities/_models/chocolate.class';
+import { Chocolate } from '../../_entities/_models/chocolate.model';
 import { chocolateAction } from './chocolate.entities';
 
 export const loadChocolates = createAction(chocolateAction.LoadChocolates);

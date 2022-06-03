@@ -1,6 +1,6 @@
 import { ChocolateViewData } from "../../_entities/_interfaces/chocolate-view-data.interface";
-import { Chocolate } from "../../_entities/_models/chocolate.class";
-import { Price } from "../../_entities/_models/price.class";
+import { Chocolate } from "../../_entities/_models/chocolate.model";
+import { Price } from "../../_entities/_models/price.model";
 import { flow as _flow, filter as _filter, map as _map, mean as _mean , min as _min, reduce as _reduce, get as _get } from 'lodash/fp';
 
 export const toChocolateViewData = ({id, prices}: Chocolate): ChocolateViewData => ({

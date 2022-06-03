@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ChocolateAppService } from '../_app-service/chocolate-app.service';
 import { MatIconModule } from '@angular/material/icon';
 import { ChocolateListComponent } from './chocolate-list.component';
+import { ChocolateViewData } from '../_entities/_interfaces/chocolate-view-data.interface';
 
 describe('ChocolateListComponent', () => {
   let testUnit: ChocolateListComponent;

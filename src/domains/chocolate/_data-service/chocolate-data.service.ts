@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable, of, pluck } from 'rxjs';
 import { chocolateData } from 'src/assets/chocolate-data.mock';
 import { map as _map } from 'lodash/fp';
-import { Chocolate } from '../_entities/_models/chocolate.class';
+import { Chocolate } from '../_entities/_models/chocolate.model';
 
 @Injectable({
   providedIn: 'root'
